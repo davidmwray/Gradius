@@ -62,21 +62,21 @@ MonoBehaviour:
   CanvasScaler: {fileID: 0}
   Layers:
   - Speed: 7
-    Scale: .899999976
+    Scale: 1
     NumStars: 50
-    ColorMask: {r: .713235259, g: .713235259, b: .713235259, a: 1}
+    Brightness: .5
   - Speed: 15
-    Scale: 1.29999995
+    Scale: 1.20000005
     NumStars: 30
-    ColorMask: {r: .823529422, g: .823529422, b: .823529422, a: 1}
+    Brightness: .600000024
   - Speed: 25
-    Scale: 1.60000002
+    Scale: 1.39999998
     NumStars: 20
-    ColorMask: {r: .90196079, g: .90196079, b: .90196079, a: 1}
+    Brightness: .75
   - Speed: 40
-    Scale: 1.79999995
+    Scale: 1.60000002
     NumStars: 13
-    ColorMask: {r: 1, g: 1, b: 1, a: 1}
+    Brightness: .949999988
   StartingVelocity: {x: -1, y: 0, z: 0}
   LayerTemplate: {fileID: 133906}
   StarTemplate: {fileID: 184778}

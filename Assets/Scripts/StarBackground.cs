@@ -7,7 +7,7 @@ public class StarBackgroundLayer
 	public float Speed = 1;
 	public float Scale = 1;
 	public int NumStars = 50;
-	public Color ColorMask;
+	public float Brightness = 1;
 }
 
 public class StarBackground : MonoBehaviour
@@ -44,7 +44,7 @@ public class StarBackground : MonoBehaviour
 
 			for (int starIdx=0; starIdx < layerDef.NumStars; starIdx++)
 			{
-				UnityEngine.Debug.Log ("ScreenResx: " + ScreenRes.x);
+				//UnityEngine.Debug.Log ("ScreenResx: " + ScreenRes.x);
 
 				var starObj = GameObject.Instantiate(StarTemplate);
 				starObj.transform.SetParent(layerGroup.transform);
@@ -52,7 +52,8 @@ public class StarBackground : MonoBehaviour
 				Vector2 pos = new Vector2(Random.Range(0f, ScreenRes.x), -Random.Range(0f, ScreenRes.y));
 				(starObj.transform as RectTransform).anchoredPosition = pos;
 
-				starObj.GetComponent<Image>().color = layerDef.ColorMask;
+				var br = layerDef.Brightness;
+				starObj.GetComponent<Image>().color = new Color(br, br, br);
 			}
 		}
 	}
@@ -70,17 +71,29 @@ public class StarBackground : MonoBehaviour
 
 		for (int i=0; i < Layers.Length; i++) 
 		{
+			var layerDef = Layers[i];
 			var layerGroup = this.transform.FindChild("StarLayer" + i);
 
 			for (int starIdx = 0; starIdx < layerGroup.childCount; starIdx++)
 			{
-				var starObj = layerGroup.GetChild (starIdx);
-				Vector3 pos = starObj.localPosition;
+				var starObj = layerGroup.GetChild(starIdx).gameObject;
+				var starObjTrans = starObj.transform as RectTransform;
+				Vector3 pos = starObjTrans.anchoredPosition;
 
-				Vector3 vel = (Velocity * Layers[i].Speed);
+				Vector3 vel = (Velocity * layerDef.Speed);
 				pos += (vel * dt);
 
-				starObj.localPosition = pos;
+				//Check for screen wrap
+				if (pos.x < 0)
+					pos.x += ScreenRes.x;
+				else if (pos.x > ScreenRes.x)
+					pos.x -= ScreenRes.x;
+				if (pos.y > 0)
+					pos.y -= ScreenRes.y;
+				else if (pos.y < -ScreenRes.y)
+					pos.y += ScreenRes.y;
+
+				starObjTrans.anchoredPosition = pos;
 			}
 		}
 	}
