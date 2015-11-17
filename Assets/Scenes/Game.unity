@@ -633,6 +633,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 11440148, guid: 07652abda8db67e41b0a5bf27fd1fef0, type: 2}
+      propertyPath: CanvasScaler
+      value: 
+      objectReference: {fileID: 150582795}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07652abda8db67e41b0a5bf27fd1fef0, type: 2}
   m_IsPrefabParent: 0
