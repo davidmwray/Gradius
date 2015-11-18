@@ -18,6 +18,7 @@ public class StarBackground : MonoBehaviour
 	public Vector3 StartingVelocity;
 	public GameObject LayerTemplate;
 	public GameObject StarTemplate;
+	public float SpeedScale = 1f;
 
 	Vector2 ScreenRes;
 	Vector3 Velocity;
@@ -81,7 +82,7 @@ public class StarBackground : MonoBehaviour
 				Vector3 pos = starObjTrans.anchoredPosition;
 
 				Vector3 vel = (Velocity * layerDef.Speed);
-				pos += (vel * dt);
+				pos += (vel * SpeedScale * dt);
 
 				//Check for screen wrap
 				if (pos.x < 0)
