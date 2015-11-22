@@ -175,6 +175,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &277648908 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 121714, guid: 5900fe91d1ffe7d4ebc9198e73512209, type: 2}
+  m_PrefabInternal: {fileID: 419235835}
+--- !u!95 &277648912
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 277648908}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40271c83b5a0a2d4ea960c0d3a4a7773, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &294387837
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,19 +364,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22496002, guid: 5900fe91d1ffe7d4ebc9198e73512209, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -340
+      value: -339.899994
       objectReference: {fileID: 0}
     - target: {fileID: 22496002, guid: 5900fe91d1ffe7d4ebc9198e73512209, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 22496002, guid: 5900fe91d1ffe7d4ebc9198e73512209, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 40
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 22496002, guid: 5900fe91d1ffe7d4ebc9198e73512209, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 22496002, guid: 5900fe91d1ffe7d4ebc9198e73512209, type: 2}
       propertyPath: m_AnchorMin.x
@@ -389,6 +410,11 @@ Prefab:
       propertyPath: StartPos
       value: 
       objectReference: {fileID: 1159116126}
+    - target: {fileID: 11452986, guid: 5900fe91d1ffe7d4ebc9198e73512209, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f695c73919d759744976e58c317eef81,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5900fe91d1ffe7d4ebc9198e73512209, type: 2}
   m_IsPrefabParent: 0
@@ -888,6 +914,7 @@ GameObject:
   - 224: {fileID: 1669961946}
   - 222: {fileID: 1669961948}
   - 114: {fileID: 1669961947}
+  - 95: {fileID: 1669961949}
   m_Layer: 5
   m_Name: World
   m_TagString: Untagged
@@ -950,3 +977,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1669961945}
+--- !u!95 &1669961949
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1669961945}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7992f1c33d8d23c49b0df6d0eaf994eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
