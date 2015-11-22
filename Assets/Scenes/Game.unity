@@ -339,7 +339,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22496002, guid: 5900fe91d1ffe7d4ebc9198e73512209, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 22496002, guid: 5900fe91d1ffe7d4ebc9198e73512209, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -381,6 +381,14 @@ Prefab:
       propertyPath: m_Pivot.y
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 11432844, guid: 5900fe91d1ffe7d4ebc9198e73512209, type: 2}
+      propertyPath: DashInputWindow
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432844, guid: 5900fe91d1ffe7d4ebc9198e73512209, type: 2}
+      propertyPath: StartPos
+      value: 
+      objectReference: {fileID: 1159116126}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5900fe91d1ffe7d4ebc9198e73512209, type: 2}
   m_IsPrefabParent: 0
@@ -445,7 +453,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1669961946}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -662,6 +670,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!1 &1159116126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1159116127}
+  m_Layer: 5
+  m_Name: StartPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1159116127
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1159116126}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1669961946}
+  m_RootOrder: 2
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -329, y: 8}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: .5, y: .5}
 --- !u!1 &1221103443
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,6 +907,7 @@ RectTransform:
   m_Children:
   - {fileID: 294387838}
   - {fileID: 517095527}
+  - {fileID: 1159116127}
   - {fileID: 1226427838}
   - {fileID: 454334601}
   m_Father: {fileID: 150582797}

@@ -14,7 +14,7 @@ public class Game : MonoBehaviour
 	{
 		float dt = Time.deltaTime;
 
-		UpdateBW (dt);
+		//UpdateBW (dt);
 	}
 
 	void UpdateBW(float dt)

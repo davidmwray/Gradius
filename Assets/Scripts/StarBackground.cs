@@ -81,7 +81,10 @@ public class StarBackground : MonoBehaviour
 				var starObjTrans = starObj.transform as RectTransform;
 				Vector3 pos = starObjTrans.anchoredPosition;
 
-				Vector3 vel = (Velocity * layerDef.Speed);
+				var shipVel = Player.Velocity.normalized * -.5f;
+				shipVel.x = 0f;
+
+				Vector3 vel = ((Velocity+shipVel) * layerDef.Speed);
 				pos += (vel * SpeedScale * dt);
 
 				//Check for screen wrap
